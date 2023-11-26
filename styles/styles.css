@@ -1,0 +1,137 @@
+.card {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	width: auto;
+	background-color: #fff;
+	display: block;
+	margin-left: 5%;
+	margin-right: 5%;
+	max-width: 500px;
+	justify-content: center;
+}
+
+.card-header {
+	background-color: #004080;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.card-body {
+	padding: 5px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	border-top: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+	text-align: left;
+}
+td:nth-child(1) {
+	width: 50%;
+	padding: 10px;
+}
+
+td:nth-child(2) {
+	text-align: right;
+	padding: 10px;
+}
+
+#percentage {
+	text-align: center
+}
+
+td:nth-child(3) {
+	text-align: right;
+	padding: 10px;
+	width: 30%;
+}
+
+input {
+	text-align: right;
+	font-size: 16px;
+	width: 120px;
+}
+
+h1 {
+	text-align: left; 
+	color: #FFFFFF; 
+	font-size: 20px; 
+	margin-bottom: 5px; 
+}
+
+.category {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 24px; 
+	color: #ffffff; 
+	margin-left: 5%;
+}
+
+.portal-group {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.portal {
+	width: 40%; 
+	margin-bottom: 30px;
+	background-color: #ffffff; 
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	position: relative; 
+	text-decoration: none; 
+	margin-left: 5%;
+}
+
+.portal:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.portal-image {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	max-width: 30px; 
+}
+
+h2, p {
+	text-align: left; 
+	color: black; 
+	text-decoration: none; 
+}
+
+h2 {
+	margin-bottom: 10px;
+}
+
+a:hover {
+	text-decoration: none; 
+}
+
+.links li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	width: auto;
+	background-color: #fff;
+	display: block;
+	margin-left: 5%;
+	margin-right: 5%;
+	max-width: 500px;
+	justify-content: center;
+  }
