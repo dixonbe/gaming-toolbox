@@ -1,0 +1,55 @@
+.card {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	width: auto;
+	background-color: #fff;
+	display: block;
+	margin-left: 5%;
+	margin-right: 5%;
+	max-width: auto;
+	justify-content: center;
+}
+
+.card-header {
+	background-color: #004080;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.card-body {
+	padding: 5px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th {
+	border-top: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+    text-align: left;
+    font-size: 16px;
+    max-width: 10%;
+    padding: 10px;
+}
+
+td {
+	border-top: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+    text-align: right;
+    font-size: 16px;
+    max-width: 10%;
+    padding: 10px;
+}
+
+input {
+	text-align: right;
+	font-size: 16px;
+	width: 120px;
+}

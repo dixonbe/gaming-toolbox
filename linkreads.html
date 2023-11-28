@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="shortcut icon" type="x-icon" href="images/igt.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/stylesnav.css">
+    <link rel="stylesheet" href="styles/linkreads.css">
+    <title>Link Reconciliation Calculator</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+        } else {
+            $(".item").addClass("active");
+        }
+    });
+});
+    </script>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <ul class="menu">
+                <li class="logo"><a href="https://www.igt.com" target="_blank"><img src="images/igt_logo.png" alt="IGT Logo" id="igt-logo"></a></li>
+                <li class="item"><a href="index.html">Home</a></li>
+                <li class="item"><a href="gamingtax.html">Gaming Tax</a></li>
+                <li class="item"><a href="linkreads.html">Link Reads</a></li>
+                <li class="item"><a href="linkrec.html">Link Reconcilation</a></li>
+                <li class="item"><a href="membership.html">Membership Term</a></li>
+                <li class="item button"><a href="https://support.igt.com/" target="_blank">Support</a></li>
+                <li class="item button secondary"><a href="https://insideigt.my.site.com/support/s/" target="_blank">Support@IGT</a></li>
+                <li class="toggle"><span class="bars"></span></li>
+            </ul>
+        </nav>
+        </div>
+        <br><br><br><br><br><br>
+    <div class="card" max-width="600px">
+        <div class="card-header">Link Reads</div>
+        <div class="card-body">
+		    <table>
+                <tr>
+                    <td></td>
+                    <td>Opening Values</td>
+                    <td>Closing Values</td>
+                    <td>Minus</td>
+                    <td>Movement</td>
+                    <td>Incrememnt</td>
+                </tr>
+				<tr>
+                    <th>Current Value:</td>
+                    <td><input type="number" id="openingcurrentvalue" oninput="calculateopening()" step="0.01" value="0.00"></td>
+                    <td><input type="number" id="closingcurrentvalue" oninput="closingvalues()" step="0.01" value="0.00"></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="number" id="increment" oninput="calculateexpected()" step="0.000001" value="0.000000"></td>
+
+                </tr>
+                <tr>
+                    <th><p>Turnover</p></td>
+                    <td><input type="number" id="openingturnover" oninput="calculateturnover()" step="0.01" value="0.00"></td>
+                    <td><input type="number" id="closingturnover" oninput="calculateturnover()" step="0.01" value="0.00"></td>
+                    <td><input type="number" id="minusturnover" oninput="calculateturnover()" step="0.01" value="0.00"></td>
+                    <td id= "turnovermovement"></td>
+                    <td></td>
+                </tr>
+								<tr>
+                    <th><p>Hits</p></td>
+                    <td><input type="number" id="openinghits" oninput="calculatehits()" step="1" value="0"></td>
+                    <td><input type="number" id="closinghits" oninput="calculatehits()" step="1" value="0"></td>
+                    <td><input type="number" id="minushits" oninput="calculatehits()" step="1" value="0"></td>
+                    <td id="hitsmovement"></td>
+                    <td>Reset Value</td>
+                </tr>
+				<tr>
+                    <th><p>Wins</p></td>
+                    <td><input type="number" id="openingwins" oninput="calculatewins()" step="0.01" value="0.00"></td>
+                    <td><input type="number" id="closingwins" oninput="calculatewins()" step="0.01" value="0.00"></td>
+                    <td><input type="number" id="minuswins" oninput="calculatewins()" step="0.01" value="0.00"></td>
+                    <td id= "winsmovement"></td>
+                    <td><input type="number" id="resetvalue" oninput="calcualteresets()" step="0.01" value="0.00"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="card" max-width="600px">
+        <div class="card-header">Link Reconcilation</div>
+        <div class="card-body">
+		    <table>
+                <tr>
+                    <td><strong>Turnover</strong></td>
+                    <td><strong>Opening</strong></td>
+                    <td><strong>Closing</strong></td>
+                    <td><strong>Increment</strong></td>
+                    <td><strong>Total Paid</strong></td>
+                    <td><strong>Hits</strong></td>
+                    <td><strong>Reset</strong></td>
+                    <td><strong>Expected Contribution</strong></td>
+                    <td><strong>Actual Contribution</strong></td>
+                    <td><strong>Variance</strong></td>
+                </tr>
+				<tr>
+                    <td id="turnovermovementrec"></td>
+                    <td id="openingcurrentvaluerec"></td>
+                    <td id="closingcurrentvaluerec"></td>
+                    <td id="Increment"></td>
+                    <td id="winsmovementrec"></td>
+                    <td id="hitsmovementrec"></td>
+                    <td id="resetvaluerec"></td>
+                    <td id="expectedcontribution"></td>
+                    <td id="ActualContributionSecondCard"></td>
+                    <td id="variance"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+	<script src="scripts/linkreads.js"></script>
+</body>
+
+</html>
