@@ -2,11 +2,13 @@
 var M5Visible = true;  // Set to false to Hide Media Manager & EZOrder
 var EzOrderbumpVisible = true;  // Set to false to hide EZOrder Bump
 var GATVisible = false;  // Set to false to hide GAT
+var ACJVisible = true;  // Set to false to hide ACJ
 		
 // Configure the IP addresses for different servers here
 const ServicesServerIPAddress = '10.230.227.228';
 const M5ServerIPAddress = '10.230.227.230';
 const GATServerIPAddress = '#';
+const ACJServerIPAddress = '#';
 		
 function generatePortalLink(serverNumber, portalNumber) {
 	switch (serverNumber) {
@@ -41,12 +43,10 @@ function generatePortalLink(serverNumber, portalNumber) {
 					return '#'; 
 			}
 		case 4:
-			// Links for server 2
+			// Links for GAT Server
 			switch (portalNumber) {
 				case 1:
-					return `https://support.igt.com/`; // Updated link for Support Portal
-				case 2:
-					return `https://insideigt.my.site.com/support/s/`; // Updated link for Support@IGT
+					return `https://${ACJServerIPAddress}/bcs`; // Updated link for ACJ Portal
 				default:
 					return '#'; 
 			}
@@ -76,5 +76,22 @@ if (!GATVisible) {
 	document.getElementById('GATCategory').style.display = 'none';
 	document.getElementById('GATLink').style.display = 'none';
 }
+
+// Check the configuration and hide ACJ
+if (!ACJVisible) {
+	document.getElementById('ACJCategory').style.display = 'none';
+	document.getElementById('ACJLink').style.display = 'none';
+}
 });
-        
+
+
+
+$(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+        } else {
+            $(".item").addClass("active");
+        }
+    });
+});

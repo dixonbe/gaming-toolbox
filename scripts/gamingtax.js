@@ -1,4 +1,15 @@
-function calculateMeteredNet() {
+document.addEventListener('DOMContentLoaded', function () {
+    // Set default values for each task
+    document.getElementById('turnover').value = (0.00).toFixed(2);
+    document.getElementById('progressivePayments').value = (0.00).toFixed(2);
+    calculateMeteredNet()
+    calculateTaxPayable()
+    calculateTotalDeductions()
+
+});
+    
+    
+    function calculateMeteredNet() {
     var turnover = parseFloat(document.getElementById("turnover").value) || 0;
     var totalWins = parseFloat(document.getElementById("totalWins").value) || 0;
 

@@ -1,7 +1,7 @@
 .card {
 	border: 1px solid #ddd;
 	border-radius: 8px;
-	overflow: scroll;
+	overflow: auto;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	margin-bottom: 20px;
 	width: auto;
@@ -20,6 +20,9 @@
 	text-align: center;
 	font-weight: bold;
 	position: fixed;
+	width: 89.88%;
+	border: 1px solid #ddd;
+	border-radius: 8px;
 }
 
 .card-body {

@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set default values for each task
     document.getElementById('openingturnover').value = (0.00).toFixed(2);
     calculateturnover();
+    calculateexpected();
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -10,13 +11,18 @@ document.addEventListener('DOMContentLoaded', function () {
     calculateactual();
     calculatehits();
     calcualteresets();
+    calculateVariance();
 });
 
 document.addEventListener('DOMContentLoaded', function () {
     // Set default values for each task
     document.getElementById('openingwins').value = (0.00).toFixed(2);
+    document.getElementById('openingcurrentvalue').value = (0.00).toFixed(2);
     calculatewins();
+    calculateactual();
+    calculateVariance();
 });
+
 
 
 
@@ -52,13 +58,16 @@ function calculateexpected() {
 }
 
 function calculatehits() {
-    var openinghits = parseFloat(document.getElementById("openinghits").value) || 0;
+        var openinghits = parseFloat(document.getElementById("openinghits").value) || 0;
     var closinghits = parseFloat(document.getElementById("closinghits").value) || 0;
     var minushits = parseFloat(document.getElementById("minushits").value) || 0;
 
     var hitsmovement = (closinghits - openinghits - minushits).toFixed(0);
     document.getElementById("hitsmovement").innerText = hitsmovement;
     document.getElementById("hitsmovementrec").innerText = hitsmovement;
+
+    var resetvalue = parseFloat(document.getElementById("resetvalue").value) || 0;
+    document.getElementById("resetvaluerec").innerText = resetvalue.toFixed(2);
 
     calculateactual();
 }
@@ -107,6 +116,12 @@ function calcualteresets() {
 
 
 function calculateVariance() {
+    var openingcurrentvalue = parseFloat(document.getElementById("openingcurrentvalue").value) || 0;
+    document.getElementById("openingcurrentvaluerec").innerText = openingcurrentvalue.toFixed(2);
+
+    var closingcurrentvalue = parseFloat(document.getElementById("closingcurrentvalue").value) || 0;
+    document.getElementById("closingcurrentvaluerec").innerText = closingcurrentvalue.toFixed(2);
+
     var ActualContribution = parseFloat(document.getElementById("ActualContributionSecondCard").innerText) || 0;
     var ExpectedContribution = parseFloat(document.getElementById("expectedcontribution").innerText) || 0;
 

@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Set default values for each task
+    document.getElementById('turnover').value = (0.00).toFixed(2);
+    document.getElementById('resetvalue').value = (0.00).toFixed(2);
+    calculateexpected()
+    calculateActual()
+    calculatetotalbasevalue()
+    
+});
+
 function calculateexpected() {
     var turnover = parseFloat(document.getElementById("turnover").value) || 0;
     var increment = parseFloat(document.getElementById("increment").value) || 0;
