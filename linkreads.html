@@ -32,6 +32,7 @@
             <ul class="menu">
                 <li class="logo"><a href="https://www.igt.com" target="_blank"><img src="images/igt_logo.png" alt="IGT Logo" id="igt-logo"></a></li>
                 <li class="item"><a href="index.html">Home</a></li>
+                <li class="item"><a href="meters.html">Gaming Meters</a></li>
                 <li class="item"><a href="gamingtax.html">Gaming Tax</a></li>
                 <li class="item"><a href="linkreads.html">Link Reads</a></li>
                 <li class="item"><a href="linkrec.html">Link Reconcilation</a></li>
@@ -52,42 +53,42 @@
                     <td></td>
                     <td>Opening Values</td>
                     <td>Closing Values</td>
-                    <td>Minus</td>
+                    <td>Adjustments</td>
                     <td>Movement</td>
                     <td>Incrememnt</td>
                 </tr>
 				<tr>
                     <th>Current Value:</td>
-                    <td><input type="number" id="openingcurrentvalue" oninput="calculateVariance()" step="0.01" value="0.00"></td>
-                    <td><input type="number" id="closingcurrentvalue" oninput="calculateVariance()" step="0.01" value="0.00"></td>
+                    <td><input type="number" id="openingcurrentvalue" oninput="calculateVariance()" step="0.01" value="0.00" tabindex="1"></td>
+                    <td><input type="number" id="closingcurrentvalue" oninput="calculateVariance()" step="0.01" value="0.00" tabindex="2"></td>
                     <td></td>
                     <td></td>
-                    <td><input type="number" id="increment" oninput="calculateexpected()" step="0.000001" value="0.000000"></td>
+                    <td><input type="number" id="increment" oninput="calculateexpected()" step="0.000001" value="0.000000" tabindex="4"></td>
 
                 </tr>
                 <tr>
                     <th><p>Turnover</p></td>
-                    <td><input type="number" id="openingturnover" oninput="calculateturnover()" step="0.01" value="0.00"></td>
-                    <td><input type="number" id="closingturnover" oninput="calculateturnover()" step="0.01" value="0.00"></td>
-                    <td><input type="number" id="minusturnover" oninput="calculateturnover()" step="0.01" value="0.00"></td>
+                    <td><input type="number" id="openingturnover" oninput="calculateturnover()" step="0.01" value="0.00" tabindex="1"></td>
+                    <td><input type="number" id="closingturnover" oninput="calculateturnover()" step="0.01" value="0.00" tabindex="2"></td>
+                    <td><input type="number" id="minusturnover" oninput="calculateturnover()" step="0.01" value="0.00" tabindex="3"></td>
                     <td id= "turnovermovement"></td>
                     <td></td>
                 </tr>
 								<tr>
                     <th><p>Hits</p></td>
-                    <td><input type="number" id="openinghits" oninput="calculatehits()" step="1" value="0"></td>
-                    <td><input type="number" id="closinghits" oninput="calculatehits()" step="1" value="0"></td>
-                    <td><input type="number" id="minushits" oninput="calculatehits()" step="1" value="0"></td>
+                    <td><input type="number" id="openinghits" oninput="calculatehits()" step="1" value="0" tabindex="1"></td>
+                    <td><input type="number" id="closinghits" oninput="calculatehits()" step="1" value="0" tabindex="2"></td>
+                    <td><input type="number" id="minushits" oninput="calculatehits()" step="1" value="0" tabindex="3"></td>
                     <td id="hitsmovement"></td>
                     <td>Reset Value</td>
                 </tr>
 				<tr>
                     <th><p>Wins</p></td>
-                    <td><input type="number" id="openingwins" oninput="calculatewins()" step="0.01" value="0.00"></td>
-                    <td><input type="number" id="closingwins" oninput="calculatewins()" step="0.01" value="0.00"></td>
-                    <td><input type="number" id="minuswins" oninput="calculatewins()" step="0.01" value="0.00"></td>
+                    <td><input type="number" id="openingwins" oninput="calculatewins()" step="0.01" value="0.00" tabindex="1"></td>
+                    <td><input type="number" id="closingwins" oninput="calculatewins()" step="0.01" value="0.00" tabindex="2"></td>
+                    <td><input type="number" id="minuswins" oninput="calculatewins()" step="0.01" value="0.00" tabindex="3"></td>
                     <td id= "winsmovement"></td>
-                    <td><input type="number" id="resetvalue" oninput="calcualteresets()" step="0.01" value="0.00"></td>
+                    <td><input type="number" id="resetvalue" oninput="calcualteresets()" step="0.01" value="0.00" tabindex="5"></td>
                 </tr>
             </table>
         </div>
