@@ -83,15 +83,3 @@ if (!ACJVisible) {
 	document.getElementById('ACJLink').style.display = 'none';
 }
 });
-
-
-
-$(function() {
-    $(".toggle").on("click", function() {
-        if ($(".item").hasClass("active")) {
-            $(".item").removeClass("active");
-        } else {
-            $(".item").addClass("active");
-        }
-    });
-});
