@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="shortcut icon" type="x-icon" href="images/igt.png">
+    <link rel="apple-touch-icon" href="images/ben_logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/stylesnav.css">
+    <link rel="stylesheet" href="styles/saas.css">
+	<title>Advantage Club Web Portal - Premium Loyalty Calculator</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+    <script>
+    $(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+        } else {
+            $(".item").addClass("active");
+        }
+    });
+    });
+
+</script>
+</head>
+<body>
+	<div class="navbar">
+        <nav>
+            <ul class="menu">
+                <li class="logo"><a href="https://www.igt.com" target="_blank"><img src="images/igt_logo.png" alt="IGT Logo" id="igt-logo"></a></li>
+                <li class="item"><a href="index.html">Home</a></li>
+                <li class="item"><a href="meters.html">Gaming Meters</a></li>
+                <li class="item"><a href="gamingtax.html">Gaming Tax</a></li>
+                <li class="item"><a href="linkreads.html">Link Reads</a></li>
+                <li class="item"><a href="linkrec.html">Link Reconcilation</a></li>
+                <li class="item"><a href="membership.html">Membership Term</a></li>
+                <li class="item button"><a href="https://support.igt.com/" target="_blank">Support</a></li>
+                <li class="item button secondary"><a href="https://insideigt.my.site.com/support/s/" target="_blank">Support@IGT</a></li>
+                <li class="toggle"><span class="bars"></span></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        <main>
+        <br><br><br><br><br><br>
+            <div class="card">
+            <div class="card-header">Premium Loyalty - Fee Calculator</div>
+            <div class="card-body">
+                <table>
+                    <tr>
+                        <th>EGM's</th>
+                        <td><input type="number" id="egmcount" oninput="calculateegmcount()" step="1" value="0" inputmode="decimal"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Module</th>
+                        <td>PE & XC</td>
+                        <td>EZPay</td>
+                        <td>EZJackpots</td>
+                    </tr>
+                    <tr>
+                        <th>Patron Count</th>
+                        <td><input type="number" id="module1count" oninput="calculatemodule1Cost()" step="1" value="0" inputmode="decimal"></td>
+                        <td><input type="number" id="module2count" oninput="calculatemodule2Cost()" step="1" value="0" inputmode="decimal"></td>
+                        <td><input type="number" id="module3count" oninput="calculatemodule3Cost()" step="1" value="0" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <th>No Patrons</th>
+                        <th>1x Module</th>
+                        <th>2x Module</th>
+                        <th>3x Module</th>
+                    </tr>
+                    <tr>
+                        <td>1 - 5</td>
+                        <td>$0.01</td>
+                        <td>$0.01</td>
+                        <td>$0.01</td>
+                    </tr>
+                    <tr>
+                        <td>6 - 10</td>
+                        <td>$0.05</td>
+                        <td>$0.05</td>
+                        <td>$0.05</td>
+                    </tr>
+                    <tr>
+                        <td>11 - 30</td>
+                        <td>$0.10</td>
+                        <td>$0.10</td>
+                        <td>$0.10</td>
+                    </tr>
+                    <tr>
+                        <td>31 - 100</td>
+                        <td>$0.15</td>
+                        <td>$0.15</td>
+                        <td>$0.15</td>
+                    </tr>
+                    <tr>
+                        <td>101 - 500</td>
+                        <td>$0.20</td>
+                        <td>$0.20</td>
+                        <td>$0.20</td>
+                    </tr>
+                    <tr>
+                        <td>501 +</td>
+                        <td>$0.25</td>
+                        <td>$0.25</td>
+                        <td>$0.25</td>
+                    </tr>
+                    <tr>
+                        <th>Cost Per Month:</th>
+                        <td id="module1cost"></td>
+                        <td id="module2cost"></td>
+                        <td id="module3cost"></td>
+                    </tr>
+                    <tr>
+                        <th>Cost per month with maximum member utilisation:</th>
+                        <td id="maxmodule1"></td>
+                        <td id="maxmodule2"></td>
+                        <td id="maxmodule3"></td>
+                    </tr>
+                </table>
+            </div>
+            </div>
+        </main>
+
+
+
+
+<script src="scripts/saas.js"></script>
+</body>
+</html>

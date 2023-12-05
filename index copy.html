@@ -6,9 +6,7 @@
     <link rel="apple-touch-icon" href="images/ben_logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="styles/stylesnav.css">
+    <link rel="stylesheet" href="styles/stylesnav2.css">
     <link rel="stylesheet" href="styles/styles.css">
 	<title>Advantage Club Web Portal</title>
     <script
@@ -31,13 +29,25 @@
 <body>
     <div>    
     <nav>
+        <label for="drop" class="toggle" id='main-toggle'><span class="nav-icon"></span></label>
+        <input type="checkbox" id="drop">
         <ul class="menu">
             <li class="logo"><a href="https://www.igt.com" target="_blank"><img src="images/igt_logo.png" alt="IGT Logo" id="igt-logo"></a></li>
             <li class="item"><a href="index.html">Home</a></li>
-            <li class="item"><a href="meters.html">Gaming Meters</a></li>
-            <li class="item"><a href="gamingtax.html">Gaming Tax</a></li>
-            <li class="item"><a href="linkreads.html">Link Reads</a></li>
-            <li class="item"><a href="linkrec.html">Link Reconcilation</a></li>
+            <li class="item"><a href="#">Gaming</a>
+                <input type="checkbox" id="drop-1">
+                <ul>
+                    <li class="item"><a href="meters.html">Gaming Meters</a></li>
+                    <li class="item"><a href="gamingtax.html">Gaming Tax</a></li>   
+                </ul>
+            </li>
+            <li class="item"><a href="#">Links</a>
+                <input type="checkbox" id="drop-2">
+                <ul>
+                    <li class="item"><a href="linkreads.html">Link Reads</a></li>
+                    <li class="item"><a href="linkrec.html">Link Reconcilation</a></li>  
+                </ul>
+            </li>
             <li class="item"><a href="membership.html">Membership Term</a></li>
             <li class="item button"><a href="https://support.igt.com/" target="_blank">Support</a></li>
             <li class="item button secondary"><a href="https://insideigt.my.site.com/support/s/" target="_blank">Support@IGT</a></li>
@@ -52,7 +62,7 @@
             <a href="#" onclick="window.open(generatePortalLink(1, 1), '_blank');" class="portal">
                 <img src="images/link.png" alt="Portal Image" class="portal-image">
                 <h2>iView Web</h2>
-                <p>Unlock real-time insights into your gaming floor's pulse - from active player counts to revenue figures</p>
+                <p>Unlock real-time insights into your gaming floor's pulse — from active player counts to revenue figures</p>
             </a>
     
             <a href="#" onclick="window.open(generatePortalLink(1, 2), '_blank');" class="portal">

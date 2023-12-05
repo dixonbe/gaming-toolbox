@@ -17,6 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     // Set default values for each task
     document.getElementById('openingwins').value = (0.00).toFixed(2);
+    calculatewins();
+    calculateactual();
+    calculateVariance();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Set default values for each task
     document.getElementById('openingcurrentvalue').value = (0.00).toFixed(2);
     calculatewins();
     calculateactual();
