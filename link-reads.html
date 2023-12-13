@@ -1,0 +1,127 @@
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="shortcut icon" type="x-icon" href="images/igt.png">
+    <link rel="apple-touch-icon" href="images/ben_logo.png">
+
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/link-reads.css">
+    <!--boxicons.com cdn link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/menu.js"></script>
+    <script defer src="scripts/link-reads.js"></script>
+
+    <title>Ben's Gaming Toolbox</title>
+</head>
+    
+<body>
+    
+    <div class="navbar close"></div>
+    
+    <main class="content">
+        <br><br><br><br>
+        <div class="card">
+            <div class="card-header">Link Reads</div>
+            <div class="card-body">
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>Opening Values</td>
+                        <td>Closing Values</td>
+                        <td>Adjustments</td>
+                        <td>Movement</td>
+                        <td>Incrememnt</td>
+                    </tr>
+                    <tr>
+                        <th>Current Value:</td>
+                        <td><input type="number" id="openingcurrentvalue" oninput="calculateVariance()" step="0.01" value="0.00" tabindex="1"></td>
+                        <td><input type="number" id="closingcurrentvalue" oninput="calculateVariance()" step="0.01" value="0.00" tabindex="2"></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="number" id="increment" oninput="calculateexpected()" step="0.000001" value="0.000000" tabindex="4"></td>
+    
+                    </tr>
+                    <tr>
+                        <th><p>Turnover</p></td>
+                        <td><input type="number" id="openingturnover" oninput="calculateturnover()" step="0.01" value="0.00" tabindex="1"></td>
+                        <td><input type="number" id="closingturnover" oninput="calculateturnover()" step="0.01" value="0.00" tabindex="2"></td>
+                        <td><input type="number" id="minusturnover" oninput="calculateturnover()" step="0.01" value="0.00" tabindex="3"></td>
+                        <td id= "turnovermovement"></td>
+                        <td></td>
+                    </tr>
+                                    <tr>
+                        <th><p>Hits</p></td>
+                        <td><input type="number" id="openinghits" oninput="calculatehits()" step="1" value="0" tabindex="1"></td>
+                        <td><input type="number" id="closinghits" oninput="calculatehits()" step="1" value="0" tabindex="2"></td>
+                        <td><input type="number" id="minushits" oninput="calculatehits()" step="1" value="0" tabindex="3"></td>
+                        <td id="hitsmovement"></td>
+                        <td>Reset Value</td>
+                    </tr>
+                    <tr>
+                        <th><p>Wins</p></td>
+                        <td><input type="number" id="openingwins" oninput="calculatewins()" step="0.01" value="0.00" tabindex="1"></td>
+                        <td><input type="number" id="closingwins" oninput="calculatewins()" step="0.01" value="0.00" tabindex="2"></td>
+                        <td><input type="number" id="minuswins" oninput="calculatewins()" step="0.01" value="0.00" tabindex="3"></td>
+                        <td id= "winsmovement"></td>
+                        <td><input type="number" id="resetvalue" oninput="calcualteresets()" step="0.01" value="0.00" tabindex="5"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="link-reconcilation-card">
+            <div class="card-header">Link Reconcilation</div>
+            <div class="card-body">
+                <table class="link-reconciliation">
+                    <tr>
+                        <td class="value"><strong>Turnover</strong></td>
+                        <td id="turnovermovementrec"></td>
+                    </tr>
+                    <tr>
+                        <td class="value"><strong>Opening</strong></td>
+                        <td id="openingcurrentvaluerec"></td>
+                    </tr>
+                    <tr>
+                        <td class="value"><strong>Closing</strong></td>
+                        <td id="closingcurrentvaluerec"></td>
+                    </tr>
+                    <tr>
+                        <td class="value"><strong>Increment</strong></td>
+                        <td id="Increment"></td>
+                    </tr>
+                    <tr>
+                        <td class="value"><strong>Total Paid</strong></td>
+                        <td id="winsmovementrec"></td>
+                    </tr>
+                    <tr>
+                        <td class="value"><strong>Hits</strong></td>
+                        <td id="hitsmovementrec"></td>
+                    </tr>
+                    <tr>
+                        <td class="value"><strong>Reset</strong></td>
+                        <td id="resetvaluerec"></td>
+                    </tr>
+                    <tr>
+                        <td class="value"><strong>Expected Contribution</strong></td>
+                        <td id="expectedcontribution"></td>
+                    </tr>
+                    <tr>
+                        <td class="value"><strong>Actual Contribution</strong></td>
+                        <td id="ActualContributionSecondCard"></td>
+                    </tr>
+                    <tr>
+                        <td class="value"><strong>Variance</strong></td>
+                        <td id="variance"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
