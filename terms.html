@@ -1,0 +1,128 @@
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="shortcut icon" type="x-icon" href="images/igt.png">
+    <link rel="apple-touch-icon" href="images/ben_logo.png">
+
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/terms.css">
+    <!--boxicons.com cdn link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/menu.js"></script>
+    <script defer src="scripts/terms.js"></script>
+
+    <title>Ben's Gaming Toolbox</title>
+</head>
+    
+<body>
+    
+    <div class="navbar close"></div>
+    
+    <main class="content">
+        <br><br><br><br>
+        <div class="card">
+            <div class="card-header">Membership Term Calculator</div>
+            <div class="card-body">
+                    
+        <table>
+            <tr>
+                <td><p><label for="termenddate">Term End Date:</label></p></td>
+                <td><input type="date" id="termenddate" oninput="calculateDates()"></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><p><label for="nextTermDays">Next Term:</label></p></td>
+                <td><input type="number" id="nextTermDays" placeholder="Number of days before go-live" oninput="calculateDates()" inputmode="decimal"></td>
+                <td ><p text-align="right"><div class="output" id="nextTermOutput"></div></p></td>
+            </tr>
+
+            <tr>
+                <td><p><label for="renewalDays">Renewal Period:</label></p></td>
+                <td><input type="number" id="renewalDays" placeholder="Number of days before go-live" oninput="calculateDates()" inputmode="decimal"></td>
+                <td><p><div class="output" id="renewalOutput"></div></p></td>
+            </tr>
+
+            <tr>
+                <td><p><label for="graceDays">Grace Period:</label></p></td>
+                <td><input type="number" id="graceDays" placeholder="Number of days after go-live" oninput="calculateDates()" inputmode="decimal"></td>
+                <td><p><div class="output" id="graceOutput"></div></p></td>
+            </tr>
+
+            <tr>
+                <td><p><label for="lapsedDays">Lapsed Period:</label></p></td>
+                <td><input type="number" id="lapsedDays" placeholder="Number of days after go-live" oninput="calculateDates()"inputmode="decimal"></td>
+                <td><p><div class="output" id="lapsedOutput"></div></p></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Term Definitions</div>
+        <div class="card-body">
+            <table>
+                <tr>
+                    <td><p>Term:</p></td>
+                    <td><p><i>Next Term</i></p></td>
+                    </tr>
+                <tr>
+                    <td><p>Status:</p></td>
+                    <td><p><i>Pending/Financial</i></p></td>
+                </tr>
+            </table>
+            <br>
+            <p>Bonus time given to new members to have a term end of the following year, ie having a term of 455 days instead of 90 days (Calendar memberhsip only).</p>
+            <br>
+            <table>
+                <tr>
+                    <td><p>Term:</p></td>
+                    <td><p><i>Renewal Period</i></p></td>
+                </tr>
+                <tr>
+                    <td><p>Status:</p></td>
+                    <td><p><i>Renewal</i></p></td>
+                </tr>
+            </table>
+            <br>
+            <p>Number of days before term end that are member can go into renewal (after Membership Billing has been processed).</p>
+            <br>
+            <table>
+                <tr>
+                    <td><p>Term:</p></td>
+                    <td><p><i>Grace Period</i></p></td>
+                </tr>
+                <tr>
+                    <td><p>Status:</p></td>
+                    <td><p><i>Renewal</i></p></td>
+                </tr>
+            </table>
+            <br>
+            <p>Number of days after term end that a member remains in Renewal (Calculated from Term End date).</p>
+            <br>
+            <table>
+                <tr>
+                    <td><p>Term:</p></td>
+                    <td><p><i>Lapsed Period</i></p></td>
+                </tr>
+                <tr>
+                    <td><p>Status:</p></td>
+                    <td><p><i>Lapsed*</i></p></td>
+                </tr>
+            </table>
+            <br>
+            <p>Number of days after term end that a member can still renew even if in a lapsed state (Calculated from Term End date). Lapsed period must be grater 
+                than Grace Period to be effective.
+            </p>
+            <br>
+
+    </main>
+
+</body>
+</html>
