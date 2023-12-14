@@ -273,6 +273,7 @@
     display: none;
 }
 .content{
+    font-family: sans-serif;
     position: fixed;
     background: #004080;
     height: 100vh;
