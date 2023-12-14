@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
             let arrowParent = e.target.parentElement.parentElement.parentElement;
             arrowParent.classList.toggle("showMenu");
         }
+        // Check if the clicked element is an arrow
+        if (e.target.classList.contains("arrow")) {
+            let arrowParent = e.target.parentElement.parentElement;
+            arrowParent.classList.toggle("showMenu");
+        }
     });
 });
 
