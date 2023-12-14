@@ -2,6 +2,7 @@
 {
 	height: 100%;
 	overflow: scroll;
+	font-family: serif;
 }
 .content::-webkit-scrollbar{
     display:none;
