@@ -35,7 +35,6 @@
     text-align: center;
     line-height: 50px;
     cursor: pointer;
-
 }
 .sidebar .logo-details .logo_name{
     font-size: 22px;
@@ -56,7 +55,7 @@
     color:#ffff00;
 }
 .sidebar.close .logo-details .bx.bxs-game{
-    transform: rotateY(180deg);
+    
     transition: 0.7s ease;
     color:#ffff00;
 }
@@ -245,12 +244,13 @@
     display: flex;
     align-items: center;
 }
-.home-section .home-content .bxs-ghost{
-    color: #00FF00;
-    font-size: 35px;
+.home-section .home-content .bxs-game{
+    color: #ffff00;
+    font-size: 30px;
     background: #222;
     border-radius: 0 6px 6px 0;
     padding: 5px;
+    display:none;
 }
 .sidebar.close ~ .home-section .home-content .text{
     font-family: 'Orbitron', sans-serif;
@@ -268,8 +268,9 @@
     opacity: 0;
     transition: all 0.5s ease;
 }
-.sidebar.close ~ .home-section .home-content .bxs-ghost{
-    color: #2121DE;
+.sidebar.close ~ .home-section .home-content .bxs-game{
+    color: #ffff00;
+    display: none;
 }
 .content{
     position: fixed;
@@ -292,8 +293,56 @@
  /* Mobile menu */
     @media all and (max-width: 710px){
     .content{
-        left: 78px;
-        width: calc(100% - 78px);
+        left: 0px;
+        width: 100%;
         
     }
+    .navbar.close + main.content {
+        left: 0px;
+        width: 100%;
+        transition: all 0.5s ease;
+        padding: 0 10px;
+        align-self: center;
+    }
+    .sidebar.close ~ .home-section{
+        left: 0px;
+        width: 100%;
+        display: block;
+    }
+    .sidebar.close .profile-details{
+        display: none;
+        transition: all 0.5s ease;
+    }
+    .sidebar.close{
+        width: 0px;
+        transition: all 0.5s ease;
+    }
+    
+    .sidebar{
+        width: 100%;
+    }
+    .sidebar .profile-details{
+        display: none;
+        transition: all 0.5s ease;
+    }
+    .home-section{
+        display: none;
+        transition: all 0.5s ease;
+    }
+    .sidebar.close .nav-links{
+        display:none;
+    }
+    .sidebar.close ~ .home-section .home-content .bxs-game{
+        color: #ffff00;
+        display: inline-block;
+        text-align: center;
+        padding: 22px;
+        transform: rotateY(180deg);
+        transition: all 0.5s ease;
+
+    }
+    .sidebar.close ~ .home-section .home-content .text{
+        width: 100%;
+    }
+
  }

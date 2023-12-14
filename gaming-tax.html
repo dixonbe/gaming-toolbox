@@ -1,7 +1,7 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -33,12 +33,12 @@
             <!-- Section 1: Metered Net Calculation -->
             <tr>
                 <td><p><label for="turnover">Turnover:</label></p></td>
-                <td><input type="number" id="turnover" oninput="calculateMeteredNet()" step="0.01" value="0.00"></td>
+                <td><input type="number" id="turnover" oninput="calculateMeteredNet()" step="0.01" value="0.00" inputmode="decimal"></td>
             </tr>
         
             <tr>
                 <td><p><label for="totalWins">Total Wins:</label></p></td>
-                <td><input type="number" id="totalWins" oninput="calculateMeteredNet()" step="0.01" value="0.00"></td>
+                <td><input type="number" id="totalWins" oninput="calculateMeteredNet()" step="0.01" value="0.00" inputmode="decimal"></td>
             </tr>
         
             <tr>
@@ -49,12 +49,12 @@
             <!-- Section 2: Total Deductions Calculation -->
             <tr>
                 <td><p><label for="progressivePayments">Progressive Payments:</label></p></td>
-                <td><input type="number" id="progressivePayments" oninput="calculateTotalDeductions()" step="0.01" value="0.00"></td>
+                <td><input type="number" id="progressivePayments" oninput="calculateTotalDeductions()" step="0.01" value="0.00" inputmode="decimal"></td>
             </tr>
         
             <tr>
                 <td><p><label for="ccceJackpots">CCCE Jackpots:</label></p></td>
-                <td><input type="number" id="ccceJackpots" oninput="calculateTotalDeductions()" step="0.01" value="0.00"></td>
+                <td><input type="number" id="ccceJackpots" oninput="calculateTotalDeductions()" step="0.01" value="0.00" inputmode="decimal"></td>
             </tr>
         
             <tr>

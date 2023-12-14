@@ -1,7 +1,7 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -39,25 +39,25 @@
 
             <tr>
                 <td><p><label for="nextTermDays">Next Term:</label></p></td>
-                <td><input type="number" id="nextTermDays" placeholder="Number of days before go-live" oninput="calculateDates()"></td>
+                <td><input type="number" id="nextTermDays" placeholder="Number of days before go-live" oninput="calculateDates()" inputmode="decimal"></td>
                 <td ><p text-align="right"><div class="output" id="nextTermOutput"></div></p></td>
             </tr>
 
             <tr>
                 <td><p><label for="renewalDays">Renewal Period:</label></p></td>
-                <td><input type="number" id="renewalDays" placeholder="Number of days before go-live" oninput="calculateDates()"></td>
+                <td><input type="number" id="renewalDays" placeholder="Number of days before go-live" oninput="calculateDates()" inputmode="decimal"></td>
                 <td><p><div class="output" id="renewalOutput"></div></p></td>
             </tr>
 
             <tr>
                 <td><p><label for="graceDays">Grace Period:</label></p></td>
-                <td><input type="number" id="graceDays" placeholder="Number of days after go-live" oninput="calculateDates()"></td>
+                <td><input type="number" id="graceDays" placeholder="Number of days after go-live" oninput="calculateDates()" inputmode="decimal"></td>
                 <td><p><div class="output" id="graceOutput"></div></p></td>
             </tr>
 
             <tr>
                 <td><p><label for="lapsedDays">Lapsed Period:</label></p></td>
-                <td><input type="number" id="lapsedDays" placeholder="Number of days after go-live" oninput="calculateDates()"></td>
+                <td><input type="number" id="lapsedDays" placeholder="Number of days after go-live" oninput="calculateDates()"inputmode="decimal"></td>
                 <td><p><div class="output" id="lapsedOutput"></div></p></td>
             </tr>
         </table>

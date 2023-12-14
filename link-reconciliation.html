@@ -1,7 +1,7 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -33,23 +33,23 @@
                     <!-- Section 1: Metered Net Calculation -->
                     <tr>
                         <td><p><label for="turnover">Turnover:</label></p></td>
-                        <td><input type="number" id="turnover" oninput="calculateexpected()" step="0.01" value="0.00"></td>
+                        <td><input type="number" id="turnover" oninput="calculateexpected()" step="0.01" value="0" inputmode="decimal"></td>
                     </tr>
                     <tr>
                         <td><p><label for="opening">Opening Value:</label></p></td>
-                        <td><input type="number" id="opening" oninput="calculateactual()" step="0.01" value="0.00"></td>
+                        <td><input type="number" id="opening" oninput="calculateactual()" step="0.01" value="0" inputmode="decimal"></td>
                     </tr>
                     <tr>
                         <td><p><label for="closing">Closing Value:</label></p></td>
-                        <td><input type="number" id="closing" oninput="calculateactual()" step="0.01" value="0.00"></td>
+                        <td><input type="number" id="closing" oninput="calculateactual()" step="0.01" value="0" inputmode="decimal"></td>
                     </tr>
                     <tr>
                         <td><p><label for="increment">Increment:</label></p></td>
-                        <td><input type="number" id="increment" oninput="calculateexpected()" step="0.000001" value="0.000000"></td>
+                        <td><input type="number" id="increment" oninput="calculateexpected()" step="0.000001" value="0.000000" inputmode="decimal"></td>
                     </tr>
                     <tr>
                         <td><p><label for="totalpaid">Total Paid:</label></p></td>
-                        <td><input type="number" id="totalpaid" oninput="calculateactual()" step="0.01" value="0.00"></td>
+                        <td><input type="number" id="totalpaid" oninput="calculateactual()" step="0.01" value="0" inputmode="decimal"></td>
                     </tr>
                     <tr>
                         <td><p><label for="hits">Hits:</label></p></td>
@@ -57,7 +57,7 @@
                     </tr>
                     <tr>
                         <td><p><label for="resetvalue">Startup Value:</label></p></td>
-                        <td><input type="number" id="resetvalue" oninput="calculatetotalbasevalue()" step="0.01" value="0.00"></td>
+                        <td><input type="number" id="resetvalue" oninput="calculatetotalbasevalue()" step="0.01" value="0" inputmode="decimal"></td>
                     </tr>
                     <tr>
                         <td><p>Total Base value:</p></td>
