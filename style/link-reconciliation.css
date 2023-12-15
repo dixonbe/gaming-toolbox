@@ -12,7 +12,8 @@
 	overflow: auto;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	margin-bottom: 20px;
-	width: 330px;
+	max-width: 500px;
+	width: 100%;
 	background-color: #fff;
 	display: block;
 	justify-content: center;
