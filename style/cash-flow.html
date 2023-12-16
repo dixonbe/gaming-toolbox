@@ -1,0 +1,109 @@
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="shortcut icon" type="x-icon" href="images/igt.png">
+    <link rel="apple-touch-icon" href="images/ben_logo.png">
+
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/cash-flow.css">
+    <!--boxicons.com cdn link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/menu.js"></script>
+    <script defer src="scripts/cash-flow.js"></script>
+
+    <title>Ben's Gaming Toolbox</title>
+</head>
+    
+<body>
+    
+    <div class="navbar close"></div>
+    
+    <main class="content">
+
+            <div class="card">
+                <div class="card-header">Cash Flow Calculator</div>
+                <div class="card-body">
+                <table>
+                    <tr>
+                        <td>Turnover:</td>
+                        <td><input type="number" id="turnover" oninput="calculateA()" step="0.01" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Money Out:</td>
+                        <td><input type="number" id="moneyout" oninput="calculateA()" step="0.01" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Actual Cancel Credit:</td>
+                        <td><input type="number" id="cancelcredit" oninput="calculateA()" step="0.01" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Total Wins:</td>
+                        <td><input type="number" id="totalwins" oninput="calculateA()" step="0.01" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Money In:</td>
+                        <td><input type="number" id="moneyin" oninput="calculateA()" step="0.01" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Calculated Cash Box (A):</td>
+                        <td><p id="calcashbox" class="calculation"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Metered Cash Box (B):</td>
+                        <td><input type="number" id="meteredcashbox" oninput="calculateCminusB()" step="0.01" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Actual Clearance (C):</td>
+                        <td><input type="number" id="actualclearance" oninput="calculateCminusA()" step="0.01" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td><p><strong>B - A:</strong></p></td>
+                        <td><p id="bminusa" class="calculation"></p></td>
+                    </tr>
+                    <tr>
+                        <td><p><strong>C - B:</strong></p></td>
+                        <td><p id="cminusb" class="calculation"></p></td>
+                    </tr>
+                    <tr>
+                        <td><p><strong>C - A:</strong></p></td>
+                        <td><p id="cminusa" class="calculation"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Short Pays</td>
+                        <td><input type="number" id="shortpays" step="0.01" inputmode="decimal"></td>
+                    </tr><tr>
+                        <td>Metered Cancel Credit:</td>
+                        <td><input type="number" id="meteredcancelcredit" oninput="calculateVariance()" step="0.01" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cancel Credit Variance:</strong></td>
+                        <td><p id="variance" class="calculation"></p></td>
+                    </tr>
+                
+                
+                </table>
+            </div>
+        </div>
+        <br>
+        <div class="cashflowvariace">
+            <div class="card-header">Cash Flow Variance Reasons</div>
+            <div class="card-body">
+            <span class="negCminusB"><strong>Negative C - B Variance: Clearance variance</strong></span>
+            <span class="negCminusB">Missing Cash, Coin or Tickets from actual clearance</span><br>
+            
+            </div>
+            
+        </div>
+        <br><br><br><br><br>
+    </main>
+    
+</body>
+
+
+</html>
