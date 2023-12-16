@@ -1,6 +1,12 @@
-.content{
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Roboto:wght@400;500;700&display=swap');
+
+
+.content
+{
+	font-family: 'Roboto', sans-serif;
 	height: 100%;
 	overflow: scroll;
+    display: block;
 }
 .content::-webkit-scrollbar{
     display:none;
@@ -16,6 +22,7 @@
 	background-color: #fff;
 	display: block;
 	justify-content: center;
+	margin: 10px 10px auto 10px;
 }
 
 
@@ -30,6 +37,7 @@
 	background-color: #fff;
 	display: block;
 	justify-content: center;
+	margin: 10px 10px auto 10px;
 }
 .gat-card {
 	border: 1px solid #ddd;
@@ -42,6 +50,7 @@
 	background-color: #fff;
 	display: block;
 	justify-content: center;
+	margin: 10px 10px auto 10px;
 }
 .jackpots-card {
 	border: 1px solid #ddd;
@@ -54,34 +63,10 @@
 	background-color: #fff;
 	display: block;
 	justify-content: center;
+	margin: 10px 10px auto 10px;
 }
 
 
-.m5-card {
-	border: 1px solid #ddd;
-	border-radius: 8px;
-	overflow: auto;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	margin-bottom: 20px;
-	max-width: 500px;
-	width: 100%;
-	background-color: #fff;
-	display: block;
-	justify-content: center;
-}
-
-.m5-card {
-	border: 1px solid #ddd;
-	border-radius: 8px;
-	overflow: auto;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	margin-bottom: 20px;
-	max-width: 500px;
-	width: 100%;
-	background-color: #fff;
-	display: block;
-	justify-content: center;
-}
 
 
 .card-header {

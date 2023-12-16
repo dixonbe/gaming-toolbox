@@ -273,7 +273,6 @@
     display: none;
 }
 .content{
-    font-family: serif;
     position: fixed;
     background: #004080;
     height: 100vh;
@@ -281,6 +280,7 @@
     padding: 0 10px;
     width: calc(100% - 300px);
     transition: all 0.5s ease;
+    margin: 70px 0px;
 }
 
 .navbar.close + main.content {
@@ -296,6 +296,7 @@
     .content{
         left: 0px;
         width: 100%;
+        display: block;
         
     }
     .navbar.close + main.content {

@@ -6,7 +6,7 @@
 	font-family: 'Roboto', sans-serif;
 	height: 100%;
 	overflow: scroll;
-    display: block;
+    display: flex;
     
 }
 .content::-webkit-scrollbar{
@@ -18,7 +18,7 @@
 	border-radius: 8px;
 	overflow: auto;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	max-width: 850px;
+	max-width: 500px;
 	width: 100%;
 	background-color: #fff;
 	display: block;
@@ -26,6 +26,21 @@
     margin: 10px 10px auto 10px;
     
 }
+
+.cashflowvariace{
+	font-family: 'Roboto', sans-serif;
+    border: 1px solid #ddd;
+	border-radius: 8px;
+	overflow: auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	max-width: 500px;
+	width: 100%;
+	background-color: #fff;
+	display: none; /* todo */
+	justify-content: center;
+    margin: 10px 10px auto 10px;
+}
+
 .card-header {
 	background-color: #004080;
 	color: #fff;
@@ -33,58 +48,32 @@
 	text-align: center;
 	font-weight: 700;
 }
-.link-reconcilation-card{
-	border: 1px solid #ddd;
-	border-radius: 8px;
-	overflow: auto;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	margin-bottom: 20px;
-	max-width: 500px;
-	width: 100%;
-	background-color: #fff;
-	display: block;
-	justify-content: center;
-	margin: 10px 10px auto 10px;
-}
-.card-header {
-	background-color: #004080;
-	color: #fff;
-	padding: 10px;
-	text-align: center;
-	font-weight: bold;
-}
-
 .card-body {
 	padding: 5px;
 }
-
 table {
 	border-collapse: collapse;
 	width: 100%;
 }
-
-th {
+th, td {
 	border-top: 1px solid #eeeeee;
 	border-bottom: 1px solid #eeeeee;
-    text-align: left;
-    font-size: 16px;
-    max-width: 10%;
-    padding: 10px;
+	text-align: left;
 }
-
-td {
-	border-top: 1px solid #eeeeee;
-	border-bottom: 1px solid #eeeeee;
-    text-align: right;
-    font-size: 16px;
-    max-width: 10%;
-    padding: 10px;
+td:nth-child(1) {
+	width: 200px;
+	padding: 10px;
+}
+td:nth-child(2) {
+	text-align: right;
+	padding: 10px 0px 0px 0px;
+    width: 200px;
 }
 
 input {
 	text-align: right;
 	font-size: 16px;
-	width: 120px;
+	width: 50%;
 	border-radius: 8px;
 	border: 1px solid #b2b2b2;
 	padding: 0px 5px;
@@ -95,7 +84,29 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.value{
-	text-align: left;
+
+
+.calculation{
+    text-align: right;
+	font-size: 16px;
+	width: 50%;
+    border-radius: 8px;
+    border: 1px solid green;
+    padding: 0px 5px;
+    margin: 0 50%;
+        
 }
 
+.negCminusB{
+	display:block
+}
+
+@media all and (max-width: 710px){
+    .content{
+        display: block;
+    }
+
+    .card{
+        margin: 10px 0px auto 0px;
+    }
+}
