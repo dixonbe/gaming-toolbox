@@ -95,7 +95,7 @@ input::-webkit-inner-spin-button {
   .tooltip .tooltiptext {
 	visibility: hidden;
 	width: 170px;
-	background-color: black;
+	background-color: #222;
 	color: #fff;
 	text-align: center;
 	padding: 5px 0;
@@ -115,20 +115,13 @@ input::-webkit-inner-spin-button {
 	width: 170px;
   	bottom: 100%;
   	left: 50%;
-  	margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  	margin-left: -20px; /* Use half of the width (120/2 = 60), to center the tooltip */
   }
 
 
-.negCminusB{
-	display:block
-}
 
 @media all and (max-width: 710px){
     .content{
         display: block;
-    }
-
-    .card{
-        margin: 10px 0px auto 0px;
     }
 }

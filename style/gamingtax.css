@@ -17,7 +17,7 @@
 	border-radius: 8px;
 	overflow: auto;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	max-width: 480px;
+	max-width: 500px;
 	width: 100%;
 	background-color: #fff;
 	display: block;
@@ -64,7 +64,7 @@ td:nth-child(3) {
 input {
 	text-align: right;
 	font-size: 16px;
-	width: 120px;
+	width: 70%;
 	border-radius: 8px;
 	border: 1px solid #b2b2b2;
 	padding: 0px 5px;
@@ -74,5 +74,17 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+
+.calculation{
+    text-align: right;
+	font-size: 16px;
+	width: 70%;
+    border-radius: 8px;
+    border: 1px solid green;
+    padding: 0px 5px;
+    margin: 0 30%;
+        
 }
 

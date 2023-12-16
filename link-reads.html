@@ -51,7 +51,7 @@
                         <td><input type="number" id="openingturnover" oninput="calculateturnover()" step="0.01" value="0" inputmode="decimal" tabindex="1"></td>
                         <td><input type="number" id="closingturnover" oninput="calculateturnover()" step="0.01" value="0" inputmode="decimal" tabindex="2"></td>
                         <td><input type="number" id="minusturnover" oninput="calculateturnover()" step="0.01" value="0" inputmode="decimal" tabindex="3"></td>
-                        <td id= "turnovermovement"></td>
+                        <td><p id="turnovermovement" class="calculation"></p></td>
                         <td></td>
                     </tr>
                                     <tr>
@@ -59,7 +59,7 @@
                         <td><input type="number" id="openinghits" oninput="calculatehits()" step="1" value="0"  inputmode="decimal" tabindex="1"></td>
                         <td><input type="number" id="closinghits" oninput="calculatehits()" step="1" value="0"  inputmode="decimal" tabindex="2"></td>
                         <td><input type="number" id="minushits" oninput="calculatehits()" step="1" value="0"  inputmode="decimal" tabindex="3"></td>
-                        <td id="hitsmovement"></td>
+                        <td><p id="hitsmovement" class="calculation"></p></td>
                         <td>Reset Value</td>
                     </tr>
                     <tr>
@@ -67,7 +67,7 @@
                         <td><input type="number" id="openingwins" oninput="calculatewins()" step="0.01" value="0" inputmode="decimal" tabindex="1"></td>
                         <td><input type="number" id="closingwins" oninput="calculatewins()" step="0.01" value="0" inputmode="decimal" tabindex="2"></td>
                         <td><input type="number" id="minuswins" oninput="calculatewins()" step="0.01" value="0" inputmode="decimal" tabindex="3"></td>
-                        <td id= "winsmovement"></td>
+                        <td><p id="winsmovement" class="calculation"></p></td>
                         <td><input type="number" id="resetvalue" oninput="calcualteresets()" step="0.01" value="0" inputmode="decimal" tabindex="4"></td>
                     </tr>
                 </table>
@@ -119,7 +119,9 @@
                     </tr>
                 </table>
             </div>
+            
         </div>
+        <br><br><br><br><br>
     </main>
 
 </body>
