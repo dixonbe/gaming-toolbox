@@ -4,7 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+ }
+ .header{
+    margin:0px;
  }
 .sidebar{
     position: fixed;
@@ -252,7 +254,7 @@
     padding: 5px;
     display:none;
 }
-.sidebar.close ~ .home-section .home-content .text{
+.sidebar.close + .home-section .home-content .text{
     font-family: 'Orbitron', sans-serif;
     color: #fff;
     font-size: 22px;
@@ -275,7 +277,7 @@
 .content{
     position: fixed;
     background: #004080;
-    height: 100vh;
+    height: 100%;
     left: 300px;
     padding: 0 10px;
     width: calc(100% - 300px);
@@ -289,6 +291,11 @@
     transition: all 0.5s ease;
     padding: 0 10px;
     align-self: center;
+}
+
+.footer{
+    margin-bottom:0px;
+    z-index: 800;
 }
 
  /* Mobile menu */

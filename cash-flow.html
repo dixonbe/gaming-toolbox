@@ -63,15 +63,31 @@
                         <td><input type="number" id="actualclearance" oninput="calculateCminusA()" step="0.01" inputmode="decimal"></td>
                     </tr>
                     <tr>
-                        <td><p><strong>B - A:</strong></p></td>
-                        <td><p id="bminusa" class="calculation"></p></td>
+                        <td><p><strong>B - A:</strong>
+                            <span class="tooltip"><i class='bx bx-info-circle'></i>
+                                <span class="tooltiptext">Positive variance is Unclaimed Payout, Negative variances is reclaimed Payout</span>
+                            </span>
+                            </p>
+                        </td>
+                        <td><p id="bminusa" class="calculation"></p>
+                    </td>
                     </tr>
                     <tr>
-                        <td><p><strong>C - B:</strong></p></td>
+                        <td><p><strong>C - B:</strong>
+                            <span class="tooltip"><i class='bx bx-info-circle'></i>
+                                <span class="tooltiptext">Positive variance more clearance than expected, Negative variances is missing cash clearance</span>
+                            </span>
+                            </p>
+                        </td>
                         <td><p id="cminusb" class="calculation"></p></td>
                     </tr>
                     <tr>
-                        <td><p><strong>C - A:</strong></p></td>
+                        <td><p><strong>C - A:</strong>
+                            <span class="tooltip"><i class='bx bx-info-circle'></i>
+                                <span class="tooltiptext">Overall variance of the machine</span>
+                            </span>
+                            </p>
+                        </td>
                         <td><p id="cminusa" class="calculation"></p></td>
                     </tr>
                     <tr>
@@ -82,25 +98,22 @@
                         <td><input type="number" id="meteredcancelcredit" oninput="calculateVariance()" step="0.01" inputmode="decimal"></td>
                     </tr>
                     <tr>
-                        <td><strong>Cancel Credit Variance:</strong></td>
+                        <td><strong>Cancel Credit Variance:</strong>
+                            <span class="tooltip"><i class='bx bx-info-circle'></i>
+                                <span class="tooltiptext">See B-A variance, if no variance then Credit was on the machine as day rolled.</span>
+                            </span>
+                        </td>
                         <td><p id="variance" class="calculation"></p></td>
                     </tr>
-                
-                
+                              
                 </table>
             </div>
         </div>
-        <br>
-        <div class="cashflowvariace">
-            <div class="card-header">Cash Flow Variance Reasons</div>
-            <div class="card-body">
-            <span class="negCminusB"><strong>Negative C - B Variance: Clearance variance</strong></span>
-            <span class="negCminusB">Missing Cash, Coin or Tickets from actual clearance</span><br>
-            
-            </div>
         </div>
+        
     </main>
-
-    
+    <br><br><br><br><br>
 </body>
+
+
 </html>
