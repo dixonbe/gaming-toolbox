@@ -1,0 +1,153 @@
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="shortcut icon" type="x-icon" href="images/igt.png">
+    <link rel="apple-touch-icon" href="images/ben_logo.png">
+
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/cashier-balance.css">
+    <!--boxicons.com cdn link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/menu.js"></script>
+    <script defer src="scripts/cashier-balance.js"></script>
+
+    <title>Ben's Gaming Toolbox</title>
+</head>
+    
+<body>
+    
+    <div class="navbar close"></div>
+    
+    <main class="content">
+
+            <div class="card">
+                <div class="card-header">Cashier Float Breakdown</div>
+                <div class="card-body">
+                <table>
+                    <tr>
+                        <td>$100 Notes:</td>
+                        <td><input type="number" id="100notes" oninput="calculatetotalNotes()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>$50 Notes:</td>
+                        <td><input type="number" id="50notes" oninput="calculatetotalNotes()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>$20 Notes:</td>
+                        <td><input type="number" id="20notes" oninput="calculatetotalNotes()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>$10 Notes:</td>
+                        <td><input type="number" id="10notes" oninput="calculatetotalNotes()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>$5 Notes:</td>
+                        <td><input type="number" id="5notes" oninput="calculatetotalNotes()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Total Notes:</td>
+                        <td><p id="totalnotes" class="calculation"></p></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>$2 Coins:</td>
+                        <td><input type="number" id="2coins" oninput="calculatetotalcoins()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>$1 Coins:</td>
+                        <td><input type="number" id="1coins" oninput="calculatetotalcoins()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>$0.50 Coins:</td>
+                        <td><input type="number" id="50coins" oninput="calculatetotalcoins()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>$0.20 Coins:</td>
+                        <td><input type="number" id="20coins" oninput="calculatetotalcoins()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>$0.10 Coins:</td>
+                        <td><input type="number" id="10coins" oninput="calculatetotalcoins()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>$0.05 Coins:</td>
+                        <td><input type="number" id="5coins" oninput="calculatetotalcoins()" inputmode="decimal"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Total Coins:</td>
+                        <td><p id="totalcoins" class="calculation"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Total Cash:</td>
+                        <td><p id="totalcash" class="calculation"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Payouts:</td>
+                        <td><input type="number" id="payouts" oninput="calculatetotalmovement()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Cashless Withdrawals:</td>
+                        <td><input type="number" id="withdrawals" oninput="calculatetotalmovement()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Cashless Deposits:</td>
+                        <td><input type="number" id="deposits" oninput="calculatetotalmovement()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Cheques Issued:</td>
+                        <td><input type="number" id="cheques" oninput="calculatetotalmovement()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Refills:</td>
+                        <td><input type="number" id="refills" oninput="calculatetotalmovement()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Petty Cash:</td>
+                        <td><input type="number" id="pettycash" oninput="calculatetotalmovement()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Rounding:</td>
+                        <td><input type="number" id="rounding" oninput="calculatetotalmovement()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Total Movement:</td>
+                        <td><p id="totalmovement" class="calculation"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Opening Float:</td>
+                        <td><input type="number" id="opening" oninput="calculatetotalFloat()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Transferred In:</td>
+                        <td><input type="number" id="transferin" oninput="calculatetotalFloat()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Transferred Out:</td>
+                        <td><input type="number" id="transferout" oninput="calculatetotalFloat()" inputmode="decimal"></td>
+                    </tr>
+                    <tr>
+                        <td>Total Float:</td>
+                        <td><p id="totalfloat" class="calculation"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Shift Varaince:</td>
+                        <td><p id="shiftvariance" class="calculation"></p></td>
+                    </tr>                              
+                </table>
+            </div>
+        </div>
+        </div>
+        
+    </main>
+    <br><br><br><br><br>
+</body>
+
+
+</html>

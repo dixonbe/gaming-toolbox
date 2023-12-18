@@ -7,13 +7,14 @@
 	height: 100%;
 	overflow: scroll;
     display: block;
+    
 }
 .content::-webkit-scrollbar{
     display:none;
 }
 .card {
 	font-family: 'Roboto', sans-serif;
-    border: 1px solid #ddd;
+  border: 1px solid #ddd;
 	border-radius: 8px;
 	overflow: auto;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -22,9 +23,10 @@
 	background-color: #fff;
 	display: block;
 	justify-content: center;
-    margin-top: 10px;
+	margin-top: 10px;
     
 }
+
 .card-header {
 	background-color: #004080;
 	color: #fff;
@@ -32,15 +34,32 @@
 	text-align: center;
 	font-weight: 700;
 }
-
 .card-body {
 	padding: 5px;
 }
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+th, td {
+	border-top: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+	text-align: left;
+}
+td:nth-child(1) {
+	width: 200px;
+	padding: 10px;
+}
+td:nth-child(2) {
+	text-align: right;
+	padding: 10px 0px 0px 0px;
+    width: 200px;
+}
 
 input {
-	text-align: center;
+	text-align: right;
 	font-size: 16px;
-	width: 100px;
+	width: 70%;
 	border-radius: 8px;
 	border: 1px solid #b2b2b2;
 	padding: 0px 5px;
@@ -52,29 +71,16 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-table {
-	border-collapse: collapse;
-	width: 100%;
+
+.calculation{
+  text-align: right;
+	font-size: 16px;
+	width: 70%;
+  border-radius: 8px;
+  border: 1px solid green;
+  padding: 0px 5px;
+  margin: 0 30%;
+        
 }
 
-th {
-	border-top: 1px solid #eeeeee;
-	border-bottom: 1px solid #eeeeee;
-	text-align: center;
-    padding: 10px;
-}
 
-td {
-	border-top: 1px solid #eeeeee;
-	border-bottom: 1px solid #eeeeee;
-	text-align: center;
-    padding: 10px;
-}
-
-td:nth-child(1) {
-	width: 120px;
-}
-
-td:nth-child(2), td:nth-child(3), td:nth-child(4) {
-	width: 80px;
-}

@@ -18,7 +18,8 @@
 	border-radius: 8px;
 	overflow: auto;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	width: 850px;
+	max-width: 850px;
+	width: 100%;
 	background-color: #fff;
 	display: block;
 	justify-content: center;
@@ -43,7 +44,7 @@
 	background-color: #fff;
 	display: block;
 	justify-content: center;
-	margin-top: 10px;
+	margin: 10px 10px auto 10px;
 }
 .card-header {
 	background-color: #004080;
