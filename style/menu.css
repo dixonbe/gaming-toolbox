@@ -282,7 +282,7 @@
     padding: 0 10px;
     width: calc(100% - 300px);
     transition: all 0.5s ease;
-    margin: 70px 0px;
+    top: 70px;
 }
 
 .navbar.close + main.content {
