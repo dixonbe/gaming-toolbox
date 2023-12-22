@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Roboto:wght@400;500;700&display=swap');
 
 
-.content
-{
+.content{
 	font-family: 'Roboto', sans-serif;
 	height: 100%;
 	overflow: scroll;
@@ -40,40 +39,40 @@
 .input-group {
 	font-size: 16px;
 	position: relative;
-	--primary: #2196f3;
+	--primary: #004080;
 }
 
 .input {
-color: #000;
-padding: 1rem;
-border: 1px solid #9e9e9e;
-border-radius: 10px;
-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-text-align: center;
-width: 300px;
-font-size: 20px;
+	color: #004080;
+	padding: 1rem;
+	border: 1px solid #004080;
+	border-radius: 10px;
+	transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	text-align: center;
+	width: 300px;
+	font-size: 20px;
 
 }
 
 .label {
-position: absolute;
-top: 1rem;
-left: 1rem;
-color: #000;
-pointer-events: none;
-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	color: #004080;
+	pointer-events: none;
+	transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input:focus {
-border: 1px solid var(--primary);
+border: 1px solid #004080;
 }
 
 .input:is(:focus, :valid) ~ label {
-transform: translateY(-120%) scale(0.7);
-background-color: #fff;
-padding-inline: 0.3rem;
-color: var(--primary);
-left: 0rem;
+	transform: translateY(-120%) scale(0.7);
+	background-color: #fff;
+	padding-inline: 0.3rem;
+	color: #004080;
+	left: 0rem;
 }
 
 .rates {
@@ -125,7 +124,6 @@ td:nth-child(2), td:nth-child(3), td:nth-child(4) {
 	border-collapse: collapse;
 	margin-left: auto;
   	margin-right: auto;
-	
 }
 
 
@@ -137,9 +135,9 @@ td:nth-child(2), td:nth-child(3), td:nth-child(4) {
 }
 
 .button {
-	border: 1px solid #004080;
-	color: #000;
-	background-color: #2196f3;
+	border: 0px;
+	color: #fff;
+	background-color: #004080;
 	padding: 15px 32px;
 	text-align: center;
 	text-decoration: none;
@@ -159,10 +157,10 @@ td:nth-child(2), td:nth-child(3), td:nth-child(4) {
 }
 
 .button:hover {
-	border: 1px solid #004080;
+	border: 4px solid #004080;
 	color: #000;
-	background-color: #004080;
-	padding: 15px 32px;
+	background-color: #fff;
+	padding: 11px 32px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
