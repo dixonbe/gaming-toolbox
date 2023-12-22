@@ -1,3 +1,15 @@
+document.addEventListener('DOMContentLoaded', function () {
+
+    document.getElementById('egmcount').value = "";
+    calculateegmcount();
+    calculatemoduleCost();
+    
+    document.getElementById('modulecount').value = 100;
+    calculatemoduleCost();
+
+    
+});
+
 function calculatemoduleCost(moduleCount) {
     var egmCount = parseFloat(document.getElementById("egmcount").value) || 0;
     var serviceFee = getServiceFee(moduleCount); // Use moduleCount instead of module1Count
