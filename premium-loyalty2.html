@@ -10,12 +10,12 @@
     <link rel="apple-touch-icon" href="images/ben_logo.png">
 
     <link rel="stylesheet" href="style/menu.css">
-    <link rel="stylesheet" href="style/premium-loyalty.css">
+    <link rel="stylesheet" href="style/premium-loyalty2.css">
     <!--boxicons.com cdn link-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script defer src="scripts/script.js"></script>
     <script defer src="scripts/menu.js"></script>
-    <script defer src="scripts/premium-loyalty.js"></script>
+    <script defer src="scripts/premium-loyalty2.js"></script>
 
     <title>Ben's Gaming Toolbox</title>
 </head>
@@ -28,48 +28,25 @@
         <div class="card">
             <div class="card-header">Premium Loyalty - Fee Calculator</div>
             <div class="card-body">
-                <br>
-                <table class="table0">
-                    <tr><td class="selector">
-                <div class="input-group">
-                    <input class="input" type="number" id="egmcount" oninput="calculateegmcount()" step="1" inputmode="decimal">
-                    <label class="label" for="egmcount">Machine Count</label>
-                </div>
-                <br>
-            </td></tr>
-            </table>
-                <table class="table1">
+                <table>
                     <tr>
-                        <td class="selector"><button type="button" class="button button1" onclick="calculatemoduleCost(5)">1-5</button></td>
-                        <td class="selector"><button type="button" class="button button2" onclick="calculatemoduleCost(10)">6-10</button></td>
-                        <td class="selector"><button type="button" class="button button3" onclick="calculatemoduleCost(30)">11-30</button></td>
+                        <th>EGM's</th>
+                        <td><input type="number" id="egmcount" oninput="calculateegmcount()" step="1" value="0" inputmode="decimal"></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td class="selector"><button type="button" class="button button4" onclick="calculatemoduleCost(100)">31-100</button></td>
-                        <td class="selector"><button type="button" class="button button5" onclick="calculatemoduleCost(500)">100-500</button></td>
-                        <td class="selector"><button type="button" class="button button6" onclick="calculatemoduleCost(501)">501 +</button></td>
-                    </tr>
-                </table>
-                <br>
-                <table class="cost">
-                    <tr>
-                        <td>Cost per Month</td>
-                        <td>$<span id="modulecost"></span></td>
+                        <th>Module</th>
+                        <td>PE & XC</td>
+                        <td>EZPay</td>
+                        <td>EZJackpots</td>
                     </tr>
                     <tr>
-                        <td>Maximum Cost per Month</td>
-                        <td>$<span id="maxmodule"></span></td>
+                        <th>Patron Count</th>
+                        <td><input type="number" id="module1count" oninput="calculatemodule1Cost()" step="10" value="0" inputmode="decimal"></td>
+                        <td><input type="number" id="module2count" oninput="calculatemodule2Cost()" step="10" value="0" inputmode="decimal"></td>
+                        <td><input type="number" id="module3count" oninput="calculatemodule3Cost()" step="10" value="0" inputmode="decimal"></td>
                     </tr>
-                </table>
-
-
-
-                <br>
-                <span class="moduletext"> Module 1: <i class='bx bx-dollar-circle'></i> Xtra Credit & Point Explosion</span><br>
-                <span class="moduletext"> Module 2: <i class='bx bx-credit-card' ></i> EZPay</span><br>
-                <span class="moduletext"> Module 3: <i class='bx bx-link' ></i> Advantage Club Jackpots</span><br>
-                <br>
-                <table class="rates">
                     <tr>
                         <th>No Patrons</th>
                         <th>1x Module</th>
@@ -112,7 +89,18 @@
                         <td>$0.25</td>
                         <td>$0.25</td>
                     </tr>
-                    
+                    <tr>
+                        <th>Cost Per Month:</th>
+                        <td id="module1cost"></td>
+                        <td id="module2cost"></td>
+                        <td id="module3cost"></td>
+                    </tr>
+                    <tr>
+                        <th>Cost per month with maximum member utilisation:</th>
+                        <td id="maxmodule1"></td>
+                        <td id="maxmodule2"></td>
+                        <td id="maxmodule3"></td>
+                    </tr>
                 </table>
             </div>
             </div>
