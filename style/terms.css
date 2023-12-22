@@ -46,11 +46,11 @@ th, td {
 	text-align: left;
 }
 td:nth-child(1) {
-	width: 100px;
+	width: 150px;
 	padding: 10px;
 }
 td:nth-child(2) {
-	text-align: right;
+	text-align: left;
 	padding: 10px;
 }
 td:nth-child(3) {
@@ -58,6 +58,13 @@ td:nth-child(3) {
 	padding: 10px;
 	width: 170px;
 }
+
+
+
+.dateselector{
+	width: 200px;
+}
+
 input {
 	text-align: right;
 	font-size: 16px;
