@@ -142,7 +142,7 @@ input::-webkit-inner-spin-button {
 }
 
 .input:is(:focus, :valid) ~ label {
-	transform: translateY(-130%) scale(0.7);
+	transform: translateY(-135%) scale(0.7);
 	background-color: #fff;
 	padding-inline: 0.3rem;
 	color: #004080;
