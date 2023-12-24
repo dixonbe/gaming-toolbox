@@ -63,6 +63,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('xtracreditopening').value = 0;
     calculatextracredit();
 
+    document.getElementById('metermovement').value = "";
+    calculatemeter()
+
 });
 
 
@@ -295,4 +298,20 @@ function calculatextracredit() {
     var xtracreditmovement = (((xtracreditnewclosing - xtracreditopening) + (xtracreditclosing - xtracreditnewopening)) / 100).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
     document.getElementById("xtracreditmovement").innerText = xtracreditmovement;
 
+}
+
+function calculatemeter() {
+    // Get input values
+    var initialReading = parseFloat(document.getElementById("meteropening").value) || 0;
+    var finalReading = parseFloat(document.getElementById("meterclosing").value) || 0;
+    var newInitialReading = parseFloat(document.getElementById("meternewopening").value) || 0;
+    var newFinalReading = parseFloat(document.getElementById("meternewclosing").value) || 0;
+
+    // Calculate meter movement
+    var meterMovement = (((newFinalReading - initialReading) + (finalReading - newInitialReading)) / 100).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    
+    // Update HTML element with the result
+    document.getElementById("metermovement").innerText = meterMovement;
+
+    // You may add comments here to explain the purpose of the function or specific calculations
 }

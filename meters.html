@@ -26,7 +26,7 @@
     
     <main class="content">
         <div class="card">
-            <div class="card-header">Calculate Meter Movement</div>
+            <div class="card-header">Meter Movement Calculator</div>
             <div class="card-body">
                 <table>
                     <tr>
@@ -209,6 +209,59 @@
             </div>
             
         </div>
+
+        <div class="mobile-view">
+            <div class="card-header">Meter Movement Calculator</div>
+            <div class="card-body">
+                <br>
+                <table class="table0">
+                    <tr>
+                        <td class="selector">
+                            <div class="input-group">
+                                <input class="input" required autocomplete="off" type="number" id="meteropening" oninput="calculatemeter()" inputmode="decimal">
+                                <label class="label" for="meteropening">Opening Meter</label>
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="selector">
+                            <div class="input-group">
+                                <input class="input" required autocomplete="off" type="number" id="meternewclosing" oninput="calculatemeter()" inputmode="decimal">
+                                <label class="label" for="meternewclosing">New Closing Meter</label>
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="selector">
+                            <div class="input-group">
+                                <input class="input" required autocomplete="off" type="number" id="meternewopening" oninput="calculatemeter()" inputmode="decimal">
+                                <label class="label" for="meternewopening">New Opening Meter</label>
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="selector">
+                            <div class="input-group">
+                                <input class="input" required autocomplete="off" type="number" id="meterclosing" oninput="calculatemeter()" inputmode="decimal">
+                                <label class="label" for="meterclosing">Closing Meter</label>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><label class="results-label">Meter Movement</label><span class="results" id="metermovement">
+                        </span>
+                        
+                        </td>
+                    </tr>
+                </table>
+                <br><br>
+            </div>
+        </div>
+        
         <br><br><br><br><br>
     </main>
 
