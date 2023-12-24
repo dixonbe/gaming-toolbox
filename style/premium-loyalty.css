@@ -70,7 +70,7 @@ border: 1px solid #004080;
 }
 
 .input:is(:focus, :valid) ~ label {
-	transform: translateY(-120%) scale(0.7);
+	transform: translateY(-130%) scale(0.7);
 	background-color: #fff;
 	padding-inline: 0.3rem;
 	color: #004080;
