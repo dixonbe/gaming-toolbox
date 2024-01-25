@@ -8,7 +8,7 @@ var ACJVisible = true;  // Set to false to hide ACJ
 const ServicesServerIPAddress = '10.230.227.228';
 const M5ServerIPAddress = '10.230.227.230';
 const GATServerIPAddress = '#';
-const ACJServerIPAddress = '#';
+const ACJServerIPAddress = '10.93.98.41';
 		
 function generatePortalLink(serverNumber, portalNumber) {
 	switch (serverNumber) {
